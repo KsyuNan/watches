@@ -418,8 +418,13 @@ footer {
 .input-group-append {
    background-color: #21f1fd;
    background-image: linear-gradient(268deg, #21f1fd 0%, #215fff 100%);
-   color: #070025;
+   color: #fff;
    weight: 600;
+
+}
+
+.input-group-append i {
+   color: #fff;
 
 }
 
@@ -428,4 +433,14 @@ footer {
   color: #fff;
   border: none;
 
+}
+
+.social-icon {
+   margin: 5px;
+   color: #fff;
+}
+
+.social-icon:hover { 
+   color: linear-gradient(268deg, #21f1fd 0%, #215fff 100%);
+   text-decoration: none;
 }
