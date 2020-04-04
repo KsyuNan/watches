@@ -1,21 +1,23 @@
 /*Как сделать навбар, который при скроле будет иметь темный фон
-  Разобраться, как делать общие стили. 
-  Как поставить кнопку посередине в video area
-  Не срабатывает фонтавесом 
+
+
+
 
 
 */
-
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 .container {
   
-  width: 1240px;
-
+  width: 1200px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 }
 
 section { 
-   padding-top: 80px;
-   padding-bottom: 80px;
+  padding: 7%;
 }
 
 /* Header area */
@@ -29,7 +31,7 @@ background-attachment: scroll;
 }
 
 .banner-title {
-    padding-top: 180px ;
+    padding: 10% ;
     color: white;
 }
 
@@ -82,47 +84,57 @@ background-attachment: scroll;
 
 /*Video area*/
 
-.video-area  {
-   background-image: url(img/video-bg.png);
+.video-area img  {
+  
    background-repeat: no-repeat;
    position: relative;
-   height: 340px;
+   max-width: 100%;
+
 }
 
-.overlay {
-   position: relative;
+.btn-video {
+  margin-left: 45%;
+  position: absolute;
+}
+
+ .overlay  {
+
    top: 0;
    left: 0;
    right: 0;
    bottom: 0;
+   color: rgba(59, 59, 59, 0.8);
 }
 
-.app-section h6 {
+.app-title {
+   margin: 3% auto;
+   max-width: 100%;
+   
+}
+
+.app-title h6 {
    font-family: 'Poppins', sans-serif;
    text-decoration: uppercase;
    color: #2160B1 ;
    font-size: 14px;
-   letter-spacing: 3px;
-   margin-top: 30px;
+   letter-spacing: 3px; 
 }
 
-.app-section h2 {
-   font-size: 28pt;
+.app-title h2 {
+   font-size: 26pt;
    font-weight: 700;
    margin-top: 25px;
-
 }
 
-.app-section p {
+.app-title p {
    color: #353232;
-   margin-top: 20px;
-
+   
 }
 
 .p-bold {
   font-weight: 600;
 }
-/*Почему не работает? */
+
 .app-title a {
   background-color:#353232;
   padding: 8px 30px;
@@ -159,6 +171,10 @@ text-decoration: none;
    background-color: #F8F8F8;
 }
 
+.watch-coutces {
+  max-width: 80%;
+
+}
 
 .section-title {
    padding-bottom: 55px;
@@ -166,40 +182,58 @@ text-decoration: none;
 
 .section-title h2 {
    font-family: 'Poppins', sans-serif;
-   font-size: 36px;
-   font-weight: 600;
+   font-size: 30pt;
+   font-weight: bold;
 }
 
 .section-title p {
-   color: #b5b5b5;
+   color: #b5b5b5; 
 }
-
 
 .cources-item {
    margin: 30px auto 50px;
 }
+
+.cources-item i {
+  color: #455BDA;
+  font-size: 20pt;
+  margin-bottom: 10%;
+}
+
+.cources-item p {
+   color: #888888;
+   font-size: 12pt;
+}
+
 
 /*Details area*/
 
 .details-area {
    display: flex;
    flex-direction: row;
+  
 }
 
 .details {
-   margin-top: -80px;
+   padding: 0 !important;
+}
+
+.details-img img {
+ width: 100%;
+
 }
 
 .details-title {
-   margin-left: 40px;
-   margin-top: 180px;
+   padding: 3%;
+   max-width: 100%;
+
 }
 
 .details-title h2 {
    font-size: 28pt;
    letter-spacing: 1px;
    font-weight: bold;
-   margin-bottom: 20px;
+ 
 }
 
 .details-title p {
@@ -224,47 +258,62 @@ text-decoration: none;
    font-weight: 600;
 }
 
-/* не работает кнопка*/
+
 .btn-blue:hover {
    border: 1px solid #215fff;
    color: #215fff;
-   background-color: transparent;
+   background-color: #fff!important;
    text-decoration: none;
+   background-image: none;
   
 }
 
 /*Features area*/
 
-/* Сделать анимацию на боксах */
 
 .features-box {
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
-   justify-content: space-between;
+   
 }
 
 .features-item {
-   width: 360px;
-   height: 200px;
-   background-color: #F3F8FF ;
+   background-color: #f9f9ff ;
    justify-content: center;
-   margin-bottom: 30px;
-   padding: 40px auto 60px;
-}
-
-.features-item h4 {
-   font-size: 20px;
-   margin-top: 40px;
-   margin-left: 30px;
-}
-
-.features-item p {
-   margin-left: 30px;
-
-}
-
+   margin: 13px;
+   padding: 15px;
  
+}
+
+.features-item:hover {
+   box-shadow: 2px 15px 15px 0px rgba(138,162,235,0.5);
+   transition: .3s;
+}
+
+.features-sub:hover i   {
+   color: #215fff;
+}
+
+.features-sub:hover h4 {
+   color: #215fff;
+}
+
+.features-sub {
+   padding: 20px;
+}
+
+.features-sub i {
+  font-size: 12pt;
+  padding:0 5px;
+}
+
+.features-sub h4 {
+   font-size: 14pt;
+}
+
+
+
 /*Watches area*/
 
 .watches-area {
@@ -278,8 +327,6 @@ text-decoration: none;
   justify-content: space-around;
 
 }
-
-/*Не срабатывает разделение*/
 
 .watches-box { 
   background-color: #fff;
@@ -331,37 +378,55 @@ text-decoration: none;
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
-   justify-content: space-between;
+   
 }
 
 .testimonial-item {
-   width: 340px;
-   height: 200px;
-   background-color: #F3F8FF ;
-   justify-content: center;
-   margin-bottom: 30px;
-   padding: auto 20px;
    
+   background-color: #f9f9ff ;
+   justify-content: center;
+   margin: 10px;
+   padding: 15px;
+   width: 31%;
+   border-radius: 5%;
+   color: slategray;
+}
+
+.testimonial-item:hover {
+   box-shadow: 2px 15px 15px 0px rgba(138,162,235,0.5);
+   transition: .3s;
+   background-color: #fff;
 }
 
 .testimonial-item h4 {
    font-size: 20px;
-   margin-top: 40px;
+   margin: 20px;
  
 }
 
 .testimonial-item p {
    padding: 0 20px;
-
+   font-size: 12pt;
 }
 
+.star span {
+   font-size: 10pt;
+}
+
+
+.checked {
+   color: orange;
+ }
 /*Faq area*/
 
 .faq-area {
   background-image: url(img/faq-bg.jpg);
+  background-attachment: local;
   background-position: center;
   background-repeat: no-repeat;
-  height: 680px;
+  overflow: hidden;
+  transform: scale(1,1);
+
 }
 
 .panel-heading {
@@ -369,6 +434,7 @@ text-decoration: none;
    margin-bottom: 10px;
    background-color: #21f1fd;
    background-image: linear-gradient(268deg, #21f1fd 0%, #215fff 100%);
+  
 }
 
 .panel-title  {
